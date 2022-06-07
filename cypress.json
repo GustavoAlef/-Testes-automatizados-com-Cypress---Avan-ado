@@ -1,3 +1,10 @@
 {
-  "baseUrl": "https://wlsf82-hacker-stories.web.app"
+  "baseUrl": "https://wlsf82-hacker-stories.web.app",
+  "pluginsFile": false,
+  "viewportHeight": 660,
+  "viewportWidth": 1000,
+  "video": false,
+  "watchForFileChanges": false,
+  "screenshotOnRunFailure": false,
+  "supportFile": "cypress/support/index.js"
 }
