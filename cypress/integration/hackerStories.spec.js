@@ -36,7 +36,7 @@ describe('Hacker Stories', () => {
 
       cy.get('.item').should('have.length', 40)
     })
-    it('searches via the last searched term', () => {
+    it.only('searches via the last searched term', () => {
       cy.intercept(
         'GET',
         `**/search?query=${newTerm}&page=0`
@@ -47,6 +47,8 @@ describe('Hacker Stories', () => {
         .type(`${newTerm}{enter}`)
 
       cy.wait('@getNewTermStories')
+
+      cy.getLocalStorage('search').should('be.equal', newTerm)
 
       cy.get(`button:contains(${initialTerm})`)
         .should('be.visible')
