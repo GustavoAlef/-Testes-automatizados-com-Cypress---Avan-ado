@@ -110,7 +110,7 @@ describe('Hacker Stories', () => {
         })
 
         context('Order by', () => {
-          it.only('orders by title', () => {
+          it('orders by title', () => {
             cy.get('.list-header-button:contains(Title)').click().as('titleHead')
 
             cy.get('.item')
@@ -159,6 +159,10 @@ describe('Hacker Stories', () => {
         cy.get('#search')
           .clear()
       })
+
+      it('shows no story when none is returned', () => {
+        cy.get('.item').should('not.exist')
+      });
   
       it('types and hits ENTER', () => {
         cy.get('#search')
