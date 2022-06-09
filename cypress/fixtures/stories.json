@@ -6,7 +6,7 @@
       "author": "author 1",
       "num_comments": 34,
       "points": 91,
-      "objectId": 0
+      "objectID": 0
     },
     {
       "title": "sample2",
@@ -14,7 +14,7 @@
       "author": "author 2",
       "num_comments": 50,
       "points": 98,
-      "objectId": 1
+      "objectID": 1
     }
   ]
 }
